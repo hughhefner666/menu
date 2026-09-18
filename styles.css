@@ -293,12 +293,58 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
   border-color: var(--line);
   box-shadow: 0 14px 35px rgba(16, 42, 67, .07);
 }
+.alpine-page .content-card[aria-labelledby="categories-title"] {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .94), rgba(221, 238, 242, .78));
+}
+.alpine-page .content-card[aria-labelledby="categories-title"]::after {
+  position: absolute;
+  right: -5rem;
+  bottom: -6rem;
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid rgba(47, 96, 69, .12);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2rem rgba(47, 96, 69, .035), 0 0 0 4rem rgba(47, 96, 69, .025);
+  content: "";
+  pointer-events: none;
+}
+.alpine-page .content-card[aria-labelledby="categories-title"] > * {
+  position: relative;
+  z-index: 1;
+}
 .alpine-page .feature {
+  position: relative;
+  overflow: hidden;
+  min-height: 20rem;
   border-color: var(--line);
-  background: rgba(255, 255, 255, .72);
-  box-shadow: inset 0 3px 0 rgba(47, 96, 69, .6);
+  background: linear-gradient(145deg, rgba(255, 255, 255, .92), rgba(225, 235, 238, .72));
+  box-shadow: inset 0 3px 0 rgba(47, 96, 69, .72), 0 12px 24px rgba(16, 42, 67, .06);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.alpine-page .feature::before {
+  position: absolute;
+  top: -4.5rem;
+  right: -3rem;
+  width: 11rem;
+  height: 11rem;
+  border: 1px solid rgba(14, 116, 144, .13);
+  border-radius: 50%;
+  content: "";
+}
+.alpine-page .feature:hover {
+  border-color: rgba(14, 116, 144, .5);
+  box-shadow: inset 0 3px 0 var(--forest), 0 20px 35px rgba(16, 42, 67, .14);
+  transform: translateY(-5px);
 }
 .alpine-page .feature h3 { color: var(--navy); }
+.alpine-page .feature h3 { margin-bottom: .65rem; font-size: 1.2rem; letter-spacing: -.025em; }
+.alpine-page .feature-note { color: var(--forest) !important; }
+.alpine-page .product-template { margin-top: 1.25rem; }
+.alpine-page .product-template div { border-top-color: rgba(16, 42, 67, .12); }
+.alpine-page .product-template dt { color: #557086; font-size: .75rem; letter-spacing: .04em; text-transform: uppercase; }
+.alpine-page .product-template input { border-color: rgba(16, 42, 67, .14); background: rgba(255, 255, 255, .68); }
 .alpine-page .order-button { background: var(--forest); }
 .alpine-page .order-button:hover,
 .alpine-page .order-button:focus-visible { background: #234a36; }
@@ -306,6 +352,11 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
 @media (max-width: 700px) {
   .alpine-hero { min-height: 40rem; padding: 2rem 1.25rem; }
   .alpine-ridge { right: -35%; bottom: 0; width: 125%; height: 40%; }
+  .alpine-page .feature { min-height: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alpine-page .feature { transition: none; }
 }
 
 .site-footer {
@@ -314,6 +365,132 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
   border-top: 1px solid var(--line);
   text-align: center;
   font-size: .9rem;
+}
+
+.alpine-page {
+  background:
+    radial-gradient(circle at top, rgba(121, 178, 236, 0.18), transparent 35%),
+    linear-gradient(180deg, #eef7ff 0%, #f4f8fb 24%, #ffffff 100%);
+}
+
+.alpine-page .site-header {
+  background: rgba(8, 25, 45, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.alpine-page .nav-shell {
+  width: min(1200px, calc(100% - 1.5rem));
+}
+
+.alpine-page .brand {
+  letter-spacing: .04em;
+}
+
+.swiss-flag {
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .7rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff 0%, #edf6ff 100%);
+  box-shadow: inset 0 0 0 1px rgba(10, 36, 64, 0.15);
+}
+
+.swiss-flag span {
+  display: block;
+  width: .9rem;
+  height: .9rem;
+  background: linear-gradient(180deg, #d52b1e 0%, #d52b1e 100%);
+  clip-path: polygon(0 42%, 42% 42%, 42% 0, 58% 0, 58% 42%, 100% 42%, 100% 58%, 58% 58%, 58% 100%, 42% 100%, 42% 58%, 0 58%);
+}
+
+.alpine-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  padding: clamp(2rem, 5vw, 4rem);
+  background:
+    linear-gradient(140deg, rgba(7, 27, 45, 0.82), rgba(18, 64, 89, 0.6)),
+    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  box-shadow: 0 20px 40px rgba(15, 40, 67, 0.18);
+}
+
+.alpine-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.alpine-ridge {
+  position: absolute;
+  inset: auto -6% -18% -6%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+  clip-path: polygon(0 100%, 0 60%, 18% 40%, 31% 52%, 48% 24%, 64% 52%, 79% 34%, 100% 60%, 100% 100%);
+  filter: blur(1px);
+}
+
+.alpine-hero .eyebrow,
+.alpine-hero h1,
+.alpine-hero .lede,
+.alpine-hero .hero-card {
+  color: #fff;
+}
+
+.alpine-hero .eyebrow {
+  color: #dfeeff;
+}
+
+.alpine-location {
+  background: linear-gradient(145deg, rgba(9, 69, 96, 0.9), rgba(15, 42, 67, 0.92));
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.alpine-guarantee {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(235, 244, 255, 0.9));
+}
+
+.guarantee-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.guarantee-visual {
+  min-height: 220px;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid rgba(14, 51, 72, 0.08);
+  box-shadow: 0 16px 32px rgba(13, 32, 48, 0.1);
+}
+
+.alps-wallpaper {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  background:
+    linear-gradient(180deg, rgba(15, 50, 77, 0.18), rgba(12, 29, 45, 0.24)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  position: relative;
+}
+
+.alps-wallpaper::before,
+.alps-wallpaper::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 40%;
+  background: rgba(255,255,255,0.12);
+  clip-path: polygon(0 100%, 0 42%, 18% 58%, 32% 30%, 48% 64%, 64% 34%, 82% 56%, 100% 42%, 100% 100%);
+}
+
+.alps-wallpaper::after {
+  inset: auto 0 0 0;
+  height: 25%;
+  background: rgba(255,255,255,0.18);
+  clip-path: polygon(0 100%, 0 72%, 24% 54%, 46% 80%, 68% 48%, 100% 78%, 100% 100%);
 }
 
 @media (max-width: 700px) {
