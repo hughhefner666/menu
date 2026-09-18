@@ -7,14 +7,16 @@
   <title>Menu | SwissShopCH</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="sidebar-page">
   <header class="site-header">
     <nav class="nav-shell" aria-label="Primary navigation">
       <a class="brand" href="3.html"><span class="swiss-flag" role="img" aria-label="Swiss flag"><span></span></span>SwissShopCH</a>
       <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" aria-label="Open navigation" data-menu-toggle>
         <span></span><span class="sr-only">Open navigation</span>
       </button>
-      <ul class="nav-menu" id="primary-menu">
+      <div class="sidebar-overlay" data-menu-overlay hidden></div>
+      <ul class="nav-menu" id="primary-menu" aria-label="SwissShopCH menu">
+        <li class="sidebar-close-item"><button class="sidebar-close" type="button" aria-label="Close navigation" data-menu-close>&times;</button></li>
         <li><a href="#menu" aria-current="page">Menu</a></li>
         <li><a href="#peptides">Peptides</a></li>
         <li><a href="#testosterone">Testosterone</a></li>
