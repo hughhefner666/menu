@@ -412,8 +412,7 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
   border-radius: 1.75rem;
   padding: clamp(2rem, 5vw, 4rem);
   background:
-    linear-gradient(140deg, rgba(7, 27, 45, 0.82), rgba(18, 64, 89, 0.6)),
-    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    linear-gradient(140deg, rgba(16, 42, 67, .98), rgba(14, 116, 144, .86));
   box-shadow: 0 20px 40px rgba(15, 40, 67, 0.18);
 }
 
@@ -471,8 +470,7 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
   height: 100%;
   min-height: 220px;
   background:
-    linear-gradient(180deg, rgba(15, 50, 77, 0.18), rgba(12, 29, 45, 0.24)),
-    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    linear-gradient(155deg, #dcecf0 0 35%, #9fc4ca 35% 58%, #2f6045 58% 100%);
   position: relative;
 }
 
@@ -492,6 +490,52 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
   background: rgba(255,255,255,0.18);
   clip-path: polygon(0 100%, 0 72%, 24% 54%, 46% 80%, 68% 48%, 100% 78%, 100% 100%);
 }
+
+.alpine-page {
+  --ink: #172b3f;
+  --muted: #607487;
+  --surface: #fbfdfe;
+  --surface-alt: #eef4f6;
+  --line: #cad7de;
+  --brand: #3d6b83;
+  --brand-dark: #2e5368;
+  --forest: #315d49;
+  background: linear-gradient(180deg, #edf4f6 0%, #f9fbfc 45%, #e9f0f2 100%);
+}
+
+.alpine-page .site-header {
+  background: linear-gradient(118deg, rgba(23, 43, 63, .98), rgba(61, 107, 131, .96));
+  box-shadow: 0 14px 32px rgba(23, 43, 63, .2);
+}
+
+.alpine-page .alpine-hero {
+  border-color: rgba(202, 215, 222, .9);
+  background: linear-gradient(140deg, #172b3f 0%, #315d72 58%, #6e9cac 100%);
+  box-shadow: 0 26px 60px rgba(23, 43, 63, .18);
+}
+
+.alpine-page .alpine-location {
+  background: linear-gradient(145deg, rgba(49, 93, 73, .96), rgba(23, 43, 63, .96));
+}
+
+.alpine-page .alpine-guarantee {
+  background: linear-gradient(145deg, rgba(255, 255, 255, .96), rgba(224, 234, 238, .9));
+}
+
+.alpine-page .feature {
+  border-color: rgba(177, 194, 202, .9);
+  background: linear-gradient(145deg, rgba(255, 255, 255, .96), rgba(224, 233, 237, .86));
+  box-shadow: inset 0 3px 0 rgba(49, 93, 73, .78), 0 16px 32px rgba(23, 43, 63, .09);
+}
+
+.alpine-page .feature:hover {
+  border-color: rgba(61, 107, 131, .64);
+  box-shadow: inset 0 3px 0 var(--forest), 0 24px 42px rgba(23, 43, 63, .16);
+}
+
+.alpine-page .order-button { background: var(--forest); }
+.alpine-page .order-button:hover,
+.alpine-page .order-button:focus-visible { background: #254937; }
 
 @media (max-width: 700px) {
   .nav-shell { min-height: 64px; }
