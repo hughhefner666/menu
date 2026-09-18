@@ -1,7 +1,63 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Flex menu | Menu patterns</title><link rel="stylesheet" href="styles.css"></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SwissShopCH menu and product categories in Switzerland.">
+  <title>Menu | SwissShopCH</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-  <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="index.html"><span class="brand-mark">S</span>SwissShopCH</a><button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" data-menu-toggle><span></span><span class="sr-only">Open menu</span></button><ul class="nav-menu" id="primary-menu"><li><a href="index.html">Home</a></li><li><a href="1.html">About</a></li><li><a href="2.html">Therapy</a></li><li><a href="3.html" aria-current="page">Research</a></li><li><a href="4.html">Dosing</a></li><li><a href="5.html">Results</a></li><li><a href="6.html">Contact</a></li></ul></nav></header>
-  <main class="page"><section class="hero"><div><p class="eyebrow">Pattern 03 · flexible layout</p><h1>Space for links and content.</h1><p class="lede">Flexbox keeps the brand anchored and lets the navigation breathe. On smaller screens, the same links become a compact panel without shifting the page underneath.</p></div><aside class="hero-card"><strong>Flex</strong><p>alignment that stays tidy as labels grow.</p></aside></section><section class="content-card"><p class="eyebrow">Design detail</p><h2>Clear focus, calm interaction</h2><p class="lede">Hover and keyboard focus share a visible treatment, while the active page is announced with <code>aria-current</code>.</p></section></main><footer class="site-footer">Flexbox responsive navigation</footer><script src="navigation.js"></script>
-</body></html>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="3.html"><span class="brand-mark">S</span>SwissShopCH</a>
+      <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" data-menu-toggle>
+        <span></span><span class="sr-only">Open menu</span>
+      </button>
+      <ul class="nav-menu" id="primary-menu">
+        <li><a href="#menu" aria-current="page">Menu</a></li>
+        <li><a href="#peptides">Peptides</a></li>
+        <li><a href="#testosterone">Testosterone</a></li>
+        <li><a href="#sarms">SARMs</a></li>
+        <li><a href="#location">Switzerland</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero" id="menu">
+      <div>
+        <p class="eyebrow">SwissShopCH · Menu</p>
+        <h1>Product categories, clearly presented.</h1>
+        <p class="lede">Explore the SwissShopCH menu by category. Product details, prices, and ordering information are not listed on this page.</p>
+      </div>
+      <aside class="hero-card" id="location">
+        <strong>CH</strong>
+        <p>Location: Switzerland</p>
+      </aside>
+    </section>
+
+    <section class="content-card" aria-labelledby="categories-title">
+      <p class="eyebrow">Browse the menu</p>
+      <h2 id="categories-title">Categories</h2>
+      <div class="feature-grid">
+        <article class="feature" id="peptides">
+          <h3>Peptides</h3>
+          <p>Menu category</p>
+        </article>
+        <article class="feature" id="testosterone">
+          <h3>Testosterone</h3>
+          <p>Menu category</p>
+        </article>
+        <article class="feature" id="sarms">
+          <h3>SARMs</h3>
+          <p>Menu category</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">SwissShopCH · Switzerland</footer>
+  <script src="navigation.js"></script>
+</body>
+</html>
