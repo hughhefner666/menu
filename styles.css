@@ -296,7 +296,28 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
 .sidebar-page .menu-toggle {
   display: grid;
   margin-left: auto;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: .9rem;
+  color: #fff;
+  background: rgba(255, 255, 255, .12);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, .18);
+  transition: background .2s ease, transform .2s ease;
 }
+
+.sidebar-page .site-header {
+  border-bottom-color: rgba(255, 255, 255, .15);
+  background: linear-gradient(115deg, rgba(18, 28, 54, .97), rgba(49, 94, 251, .94));
+  box-shadow: 0 12px 30px rgba(20, 30, 65, .16);
+}
+
+.sidebar-page .nav-shell { min-height: 78px; }
+.sidebar-page .brand { color: #fff; font-size: 1.25rem; letter-spacing: -.045em; }
+.sidebar-page .brand::after { display: block; margin: -.2rem 0 0 2.55rem; color: #cbd7ff; content: "Switzerland"; font-size: .68rem; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
+.sidebar-page .menu-toggle:hover,
+.sidebar-page .menu-toggle:focus-visible { background: rgba(255, 255, 255, .22); transform: translateY(-1px); }
+.sidebar-page .menu-toggle:focus-visible { outline-color: rgba(255, 255, 255, .7); }
 
 .sidebar-page .nav-menu {
   position: fixed;
