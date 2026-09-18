@@ -36,4 +36,36 @@
       if (event.key === "Escape" && menu.classList.contains("is-open")) setMenuState(false);
     });
   });
+
+  var modal = document.querySelector("[data-contact-modal]");
+  if (!modal) return;
+  var orderButtons = document.querySelectorAll("[data-order-category]");
+  var closeModalButtons = modal.querySelectorAll("[data-modal-close]");
+  var categoryLabel = modal.querySelector("[data-order-label]");
+  var form = modal.querySelector("[data-contact-form]");
+  var status = modal.querySelector("[data-form-status]");
+  var lastOrderButton;
+  var closeModal = function () {
+    modal.hidden = true;
+    document.body.classList.remove("modal-is-open");
+    if (lastOrderButton) lastOrderButton.focus();
+  };
+  orderButtons.forEach(function (orderButton) {
+    orderButton.addEventListener("click", function () {
+      lastOrderButton = orderButton;
+      categoryLabel.textContent = "Category: " + orderButton.getAttribute("data-order-category");
+      status.hidden = true;
+      modal.hidden = false;
+      document.body.classList.add("modal-is-open");
+      modal.querySelector("input").focus();
+    });
+  });
+  closeModalButtons.forEach(function (button) { button.addEventListener("click", closeModal); });
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    status.hidden = false;
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !modal.hidden) closeModal();
+  });
 }());

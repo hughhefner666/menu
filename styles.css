@@ -205,6 +205,26 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
 
 .feature h3 { margin: 0 0 .35rem; font-size: 1rem; }
 .feature p { margin: 0; color: var(--muted); font-size: .92rem; }
+.feature-note { margin-bottom: .8rem !important; color: var(--brand) !important; font-size: .75rem !important; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.product-template { margin: 0 0 1rem; }
+.product-template div { display: grid; grid-template-columns: 1fr 1.35fr; gap: .75rem; padding: .5rem 0; border-top: 1px solid var(--line); font-size: .85rem; }
+.product-template dt { color: var(--muted); font-weight: 700; }
+.product-template dd { margin: 0; color: var(--ink); }
+.order-button { padding: .7rem 1rem; border: 0; border-radius: .7rem; color: #fff; background: var(--brand); font: inherit; font-weight: 750; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+.order-button:hover, .order-button:focus-visible { background: var(--brand-dark); transform: translateY(-1px); }
+.order-button:focus-visible, .modal-close:focus-visible, .modal-panel input:focus-visible, .modal-panel textarea:focus-visible { outline: 3px solid rgba(49, 94, 251, .3); outline-offset: 3px; }
+.contact-modal[hidden] { display: none; }
+.contact-modal { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; padding: 1rem; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(14, 22, 40, .58); }
+.modal-panel { position: relative; width: min(100%, 30rem); max-height: min(90dvh, 42rem); overflow: auto; padding: clamp(1.5rem, 4vw, 2.5rem); border: 1px solid var(--line); border-radius: 1.25rem; background: var(--surface); box-shadow: var(--shadow); }
+.modal-close { position: absolute; top: 1rem; right: 1rem; width: 2.5rem; height: 2.5rem; border: 1px solid var(--line); border-radius: .7rem; color: var(--ink); background: var(--surface); font-size: 1.8rem; line-height: 1; cursor: pointer; }
+.modal-category { color: var(--brand); font-weight: 750; }
+.modal-note { padding: .75rem 1rem; color: var(--muted); border-left: 3px solid var(--brand); background: var(--surface-alt); font-size: .9rem; }
+.modal-panel form { display: grid; gap: .5rem; }
+.modal-panel label { margin-top: .5rem; font-size: .9rem; font-weight: 700; }
+.modal-panel input, .modal-panel textarea, .product-template input { width: 100%; padding: .55rem .65rem; border: 1px solid var(--line); border-radius: .55rem; color: var(--ink); background: var(--surface); font: inherit; font-size: .85rem; }
+.form-status { margin: .25rem 0 0; color: var(--brand-dark); font-size: .9rem; }
+.sidebar-page.modal-is-open { overflow: hidden; }
 
 .site-footer {
   padding: 2rem 1rem;
