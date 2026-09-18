@@ -1,162 +1,51 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menu Responsive No Javascript</title>
-<style>
-* {margin: 0;  padding: 0;  box-sizing: border-box; }
-body {margin: 0;  font-family: "Poppins", Helvetica, sans-serif;  background-color: #ccddb7; }
-
-a {color: #ffffff; //white}
-
-/* header */
-.header {
-  background-color: #000000; //#fff;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-}
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  background-color: black; //#fff;
-}
-
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  //border-right: 1px solid #f4f4f4;
-  border-left: 0.5px solid #ccc; //#f4f4f4;
-  text-decoration: none;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
- background-color: red; //#f4f4f4;
-}
-
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-.header .logo:hover { background-color: red; //#f4f4f4;}
-
-/* menu */
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-}
-
-/* menu icon */
-
-.header .menu-icon {
-  cursor: pointer;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-.header .menu-icon .nav-icon {
-  background: white; //#333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .nav-icon:before,
-.header .menu-icon .nav-icon:after {
-  background: white; //#333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .nav-icon:before {
-  top: 5px;
-}
-
-.header .menu-icon .nav-icon:after {
-  top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-  transform: rotate(-45deg);
-  top:0;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-  transform: rotate(45deg);
-  top:0;
-}
-
-
-
-/* 48em = 768px @ 16pt font */
-@media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
-  h2 {color: red; }
-
-</style>
-</head><body>
-<header class="header">
-<a href="/" class="logo">wawtv</a>
-<input class="menu-btn" type="checkbox" id="menu-btn" />
-<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-
-<ul class="menu">
-
- <li><a href="#"> Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Contact</a></li>
-
-</ul>
-</header><br><br><br> <br><br>
-
-<center><h2>Menu Navbar Responsive Without Javascript</h2><br> 
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A collection of responsive navigation patterns.">
+  <title>Menu patterns | Responsive navigation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">A</span>Aster</a>
+      <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" data-menu-toggle><span></span><span class="sr-only">Open menu</span></button>
+      <ul class="nav-menu" id="primary-menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="1.html">About</a></li>
+        <li><a href="2.html">Services</a></li>
+        <li><a href="3.html">Gallery</a></li>
+        <li><a href="4.html">Pricing</a></li>
+        <li><a href="5.html">Blog</a></li>
+        <li><a href="6.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Responsive navigation playground</p>
+        <h1>Menus that feel good everywhere.</h1>
+        <p class="lede">A polished set of small, static HTML examples. Each page explores a different implementation while sharing a clear visual language, touch-friendly controls, and accessible navigation.</p>
+      </div>
+      <aside class="hero-card">
+        <strong>7</strong>
+        <p>navigation patterns, ready to inspect and adapt.</p>
+      </aside>
+    </section>
+    <section class="content-card">
+      <p class="eyebrow">Start here</p>
+      <h2>Choose a pattern to explore</h2>
+      <div class="feature-grid">
+        <article class="feature"><h3>JavaScript menu</h3><p>Progressive enhancement with an explicit button and state.</p></article>
+        <article class="feature"><h3>CSS-only menu</h3><p>A checkbox-powered pattern with no runtime dependency.</p></article>
+        <article class="feature"><h3>Framework example</h3><p>A clean Bootstrap-inspired layout without overwhelming the content.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">Built as a static HTML demo · resize the window to test every menu.</footer>
+  <script src="navigation.js"></script>
 </body>
 </html>
