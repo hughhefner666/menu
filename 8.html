@@ -33,6 +33,13 @@
         <li><a href="#contact">Contact / お問い合わせ</a></li>
       </ul>
     </nav>
+    <nav class="shop-strip" aria-label="Shop categories / カテゴリ">
+      <a href="#studio">Studio Portraits <span>スタジオ</span></a>
+      <a href="#editorial">Editorial <span>エディトリアル</span></a>
+      <a href="#fashion">Fashion <span>ファッション</span></a>
+      <a href="#events">Events <span>イベント</span></a>
+      <a href="#packages">Production Packages <span>制作パッケージ</span></a>
+    </nav>
   </header>
 
   <main class="neon-page" id="photo-menu">
@@ -48,10 +55,10 @@
       <h2 id="profiles-title">Synthetic portrait studies</h2>
       <p class="neon-section-intro">These safe visual studies are fictional and synthetic. They are not photographs of real people and are limited to non-explicit studio portrait planning.</p>
       <div class="photo-grid">
-        <article class="photo-card"><div class="photo-visual" aria-label="Abstract AI-generated studio portrait placeholder"></div><div><span class="ai-label">AI-generated / AI生成</span><h3>Hana A. <span class="jp">ハナ A.</span></h3><ul class="profile-meta"><li>Studio portrait</li><li>Japanese / English</li></ul><p>Fictional softbox-lighting study for a calm studio portrait.</p></div></article>
-        <article class="photo-card"><div class="photo-visual" aria-label="Abstract AI-generated studio portrait placeholder"></div><div><span class="ai-label">AI-generated / AI生成</span><h3>Mio K. <span class="jp">ミオ K.</span></h3><ul class="profile-meta"><li>Studio portrait</li><li>Japanese / Korean</li></ul><p>Fictional portrait direction study with clean, controlled framing.</p></div></article>
-        <article class="photo-card"><div class="photo-visual" aria-label="Abstract AI-generated studio portrait placeholder"></div><div><span class="ai-label">AI-generated / AI生成</span><h3>Rei S. <span class="jp">レイ S.</span></h3><ul class="profile-meta"><li>Studio portrait</li><li>Japanese / English</li></ul><p>Fictional composition placeholder for wardrobe and key-light planning.</p></div></article>
-        <article class="photo-card"><div class="photo-visual" aria-label="Abstract AI-generated studio portrait placeholder"></div><div><span class="ai-label">AI-generated / AI生成</span><h3>Yuki N. <span class="jp">ユキ N.</span></h3><ul class="profile-meta"><li>Studio portrait</li><li>Japanese / English</li></ul><p>Fictional monochrome portrait reference for a professional studio set.</p></div></article>
+        <article class="photo-card" id="studio"><div class="photo-visual" aria-label="Abstract AI-generated studio portrait placeholder"></div><div><span class="ai-label">AI-generated / AI生成</span><h3>Hana A. <span class="jp">ハナ A.</span></h3><ul class="profile-meta"><li>Studio portrait</li><li>Japanese / English</li></ul><p>Fictional softbox-lighting study for a calm studio portrait.</p><button class="package-button" type="button" data-package="Studio portrait portfolio">Add portfolio selection</button></div></article>
+        <article class="photo-card" id="editorial"><div class="photo-visual" aria-label="Abstract AI-generated editorial portrait placeholder"></div><div><span class="ai-label">AI-generated / AI生成</span><h3>Mio K. <span class="jp">ミオ K.</span></h3><ul class="profile-meta"><li>Editorial portrait</li><li>Japanese / Korean</li></ul><p>Fictional portrait direction study with clean, controlled framing.</p><button class="package-button" type="button" data-package="Editorial portrait portfolio">Add portfolio selection</button></div></article>
+        <article class="photo-card" id="fashion"><div class="photo-visual" aria-label="Abstract AI-generated fashion portrait placeholder"></div><div><span class="ai-label">AI-generated / AI生成</span><h3>Rei S. <span class="jp">レイ S.</span></h3><ul class="profile-meta"><li>Fashion portrait</li><li>Japanese / English</li></ul><p>Fictional composition placeholder for wardrobe and key-light planning.</p><button class="package-button" type="button" data-package="Fashion portrait portfolio">Add portfolio selection</button></div></article>
+        <article class="photo-card" id="events"><div class="photo-visual" aria-label="Abstract AI-generated event portrait placeholder"></div><div><span class="ai-label">AI-generated / AI生成</span><h3>Yuki N. <span class="jp">ユキ N.</span></h3><ul class="profile-meta"><li>Event portrait</li><li>Japanese / English</li></ul><p>Fictional monochrome portrait reference for a professional studio set.</p><button class="package-button" type="button" data-package="Event portrait portfolio">Add portfolio selection</button></div></article>
       </div>
     </section>
 
@@ -74,7 +81,14 @@
       <form class="contact-form" data-production-form><label>Name / お名前<input type="text" required></label><label>Email / メール<input type="email" required></label><label class="full">Project brief / 内容<textarea rows="4" required placeholder="Scope, dates, location, and usage rights / 内容・日程・場所・使用範囲"></textarea></label><label class="full"><input type="checkbox" required> I confirm this is a lawful professional photography inquiry, not a sexual-service or transactional booking. / 法令に基づく写真制作の依頼です。</label><button class="neon-submit" type="submit">Inquiry placeholder / 送信</button><p class="form-note full" data-form-status hidden>This demo does not transmit data. Add a secure backend and full privacy process before launch.</p></form>
     </section>
   </main>
-  <footer class="neon-footer">AI-generated studio portrait studies · 18+ · Non-explicit professional photography only</footer>
+  <section class="neon-section newsletter-panel" aria-labelledby="newsletter-title">
+    <p class="neon-kicker">Private updates / ニュースレター</p>
+    <h2 id="newsletter-title">A quiet look at new studies.</h2>
+    <p class="neon-section-intro">Subscribe for portfolio releases and production notes. We do not sell or share subscriber data. A real privacy process and email provider are required before launch.</p>
+    <form class="newsletter-form" data-newsletter-form><label for="newsletter-email">Email / メール</label><div><input id="newsletter-email" type="email" required placeholder="you@example.com"><button class="neon-submit" type="submit">Subscribe / 登録</button></div><p class="form-note" data-newsletter-status hidden>This is a placeholder signup; no data was sent.</p></form>
+  </section>
+  <footer class="neon-footer luxury-footer"><span>TOKYO / 東京</span><span>AI-generated studio portrait studies · 18+</span><span>Informational portfolio demo · Privacy first</span></footer>
+  <div class="cart-bar" id="packages" data-cart-bar aria-live="polite"><span><strong data-cart-count>0</strong> selections / 選択</span><button type="button" class="cart-clear" data-cart-clear disabled>Clear / クリア</button><span class="cart-note">Portfolio/licensed photo selections only · no payment or booking</span></div>
   <script src="tokyo-neon.js"></script>
 </body>
 </html>

@@ -39,4 +39,35 @@
       form.querySelector("[data-form-status]").hidden = false;
     });
   }
+
+  var packageButtons = document.querySelectorAll("[data-package]");
+  var cartCount = document.querySelector("[data-cart-count]");
+  var cartClear = document.querySelector("[data-cart-clear]");
+  var selections = [];
+  var updateCart = function () {
+    cartCount.textContent = String(selections.length);
+    cartClear.disabled = selections.length === 0;
+    packageButtons.forEach(function (button) {
+      var selected = selections.indexOf(button.getAttribute("data-package")) !== -1;
+      button.classList.toggle("is-selected", selected);
+      button.setAttribute("aria-pressed", String(selected));
+      button.textContent = selected ? "Remove selection" : "Add portfolio selection";
+    });
+  };
+  packageButtons.forEach(function (button) {
+    button.setAttribute("aria-pressed", "false");
+    button.addEventListener("click", function () {
+      var item = button.getAttribute("data-package");
+      var index = selections.indexOf(item);
+      if (index === -1) selections.push(item);
+      else selections.splice(index, 1);
+      updateCart();
+    });
+  });
+  if (cartClear) cartClear.addEventListener("click", function () { selections = []; updateCart(); });
+  var newsletter = document.querySelector("[data-newsletter-form]");
+  if (newsletter) newsletter.addEventListener("submit", function (event) {
+    event.preventDefault();
+    newsletter.querySelector("[data-newsletter-status]").hidden = false;
+  });
 }());
