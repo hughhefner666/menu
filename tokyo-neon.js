@@ -1,17 +1,18 @@
 (function () {
+  var germanPage = document.body.classList.contains("german-photo-page");
   var toggle = document.querySelector("[data-neon-toggle]");
   var links = document.querySelector("[data-neon-links]");
   if (toggle && links) {
     toggle.addEventListener("click", function () {
       var open = links.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
-      toggle.textContent = open ? "Close menu" : "Menu";
+      toggle.textContent = open ? (germanPage ? "Menü schließen" : "Close menu") : (germanPage ? "Menü" : "Menu");
     });
     links.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         links.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
-        toggle.textContent = "Menu";
+        toggle.textContent = germanPage ? "Menü" : "Menu";
       });
     });
   }
@@ -28,7 +29,7 @@
       document.querySelector("#directory-title").focus();
     });
     gate.querySelector("[data-age-no]").addEventListener("click", function () {
-      gate.querySelector("[data-age-message]").textContent = "Access is limited to people aged 18 or older.";
+    gate.querySelector("[data-age-message]").textContent = germanPage ? "Der Zugang ist auf Personen ab 18 Jahren beschränkt." : "Access is limited to people aged 18 or older.";
     });
   }
 
@@ -51,7 +52,7 @@
       var selected = selections.indexOf(button.getAttribute("data-package")) !== -1;
       button.classList.toggle("is-selected", selected);
       button.setAttribute("aria-pressed", String(selected));
-      button.textContent = selected ? "Remove selection" : "Add portfolio selection";
+      button.textContent = selected ? (germanPage ? "Auswahl entfernen" : "Remove selection") : (germanPage ? "Portfolioauswahl hinzufügen" : "Add portfolio selection");
     });
   };
   packageButtons.forEach(function (button) {
