@@ -17,18 +17,16 @@
       <div class="sidebar-overlay" data-menu-overlay hidden></div>
       <ul class="nav-menu" id="primary-menu" aria-label="SwissShopCH menu">
         <li class="sidebar-close-item"><button class="sidebar-close" type="button" aria-label="Close navigation" data-menu-close>&times;</button></li>
-        <li><a href="#overview" aria-current="page">Overview</a></li>
-        <li><a href="#peptides">Peptides</a></li>
-        <li><a href="#testosterone">Testosterone</a></li>
-        <li><a href="#sarms">SARMs</a></li>
-        <li><a href="#location">Switzerland</a></li>
+        <li><a href="#home" aria-current="page">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#categories">Categories</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="page">
-    <section class="hero alpine-hero" id="overview">
+    <section class="hero alpine-hero" id="home">
       <div class="alpine-ridge" aria-hidden="true"></div>
       <div>
         <p class="eyebrow">SwissShopCH · Swiss Alps</p>
@@ -41,7 +39,7 @@
       </aside>
     </section>
 
-    <section class="content-card overview-card" id="menu" aria-labelledby="overview-title">
+    <section class="content-card overview-card" id="about" aria-labelledby="overview-title">
       <p class="eyebrow">Overview</p>
       <h2 id="overview-title">SwissShopCH at a glance</h2>
       <p class="lede">SwissShopCH presents a focused menu of Peptides, Testosterone, and SARMs for visitors in Switzerland.</p>
@@ -60,7 +58,7 @@
       </div>
     </section>
 
-    <section class="content-card" aria-labelledby="categories-title">
+    <section class="content-card" id="categories" aria-labelledby="categories-title">
       <p class="eyebrow">Browse the menu</p>
       <h2 id="categories-title">Categories</h2>
       <div class="feature-grid">
@@ -96,9 +94,16 @@
         </article>
       </div>
     </section>
+
+    <section class="content-card contact-card" id="contact" aria-labelledby="contact-section-title">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-section-title">Contact SwissShopCH</h2>
+      <p class="lede">For a general inquiry, use the contact form template. It is not connected to a backend or email service.</p>
+      <button class="order-button" type="button" data-contact-open>Open contact form</button>
+    </section>
   </main>
 
-  <div class="contact-modal" id="contact" data-contact-modal hidden>
+  <div class="contact-modal" data-contact-modal hidden>
     <div class="modal-backdrop" data-modal-close></div>
     <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="contact-title">
       <button class="modal-close" type="button" aria-label="Close order form" data-modal-close>&times;</button>
