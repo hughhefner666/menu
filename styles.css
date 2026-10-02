@@ -715,11 +715,20 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
   transform: translateY(-1px);
 }
 .category-bar a:focus-visible { outline: 3px solid rgba(255, 255, 255, .55); outline-offset: 2px; }
-.alpine-page .shop-categories .feature-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.alpine-page .shop-categories .feature { min-height: 17rem; }
+.landing-page .shop-categories .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.landing-page .shop-categories .feature { min-height: 18rem; padding: 1.75rem; }
 
-.landing-page .page { padding-top: clamp(2.5rem, 6vw, 5rem); }
-.landing-hero { min-height: 26rem; }
+.landing-page .page {
+  width: min(1240px, calc(100% - 3rem));
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+.landing-hero {
+  min-height: 32rem;
+  padding: clamp(3rem, 7vw, 6rem);
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr);
+  gap: clamp(3rem, 8vw, 7rem);
+}
 .landing-hero h1 { max-width: 14ch; }
 .landing-hero .landing-disclaimer {
   max-width: 52ch;
@@ -730,12 +739,14 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
   font-size: .86rem;
 }
 .landing-paths,
-.landing-categories { margin-top: 2rem; }
-.path-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.landing-categories { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.landing-page .content-card { padding: clamp(2rem, 5vw, 4rem); }
+.landing-page .content-card h2 { margin-bottom: 1rem; }
+.path-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2rem); margin-top: 2rem; }
 .path-card {
   display: flex;
-  min-height: 15rem;
-  padding: clamp(1.25rem, 3vw, 2rem);
+  min-height: 19rem;
+  padding: clamp(1.75rem, 4vw, 3rem);
   flex-direction: column;
   align-items: flex-start;
   border: 1px solid var(--line);
@@ -796,13 +807,20 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
 }
 
 @media (max-width: 1000px) {
-  .alpine-page .shop-categories .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .alpine-page .shop-categories .feature { min-height: 15rem; }
+  .landing-page .page { width: min(900px, calc(100% - 2.5rem)); }
+  .landing-hero { gap: 2.5rem; }
+  .landing-page .shop-categories .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .landing-page .shop-categories .feature { min-height: 16rem; }
 }
 
 @media (max-width: 700px) {
   .alpine-page .nav-shell,
   .category-bar-inner { width: calc(100% - 2rem); }
+  .landing-page .page { width: calc(100% - 2rem); padding-top: 2rem; }
+  .landing-hero { min-height: 0; padding: 2rem 1.5rem; grid-template-columns: 1fr; gap: 1.5rem; }
+  .landing-hero .hero-card { min-height: 10rem; }
+  .landing-page .content-card { padding: 1.5rem; }
+  .path-card { min-height: 16rem; padding: 1.5rem; }
   .category-bar-inner {
     min-height: 0;
     padding: .65rem 0;
@@ -817,13 +835,9 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
     scrollbar-width: thin;
   }
   .category-bar a { padding: .45rem .7rem; }
-  .alpine-page .shop-categories .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .alpine-page .shop-categories .feature { min-height: auto; }
+  .landing-page .shop-categories .feature-grid { grid-template-columns: 1fr; }
+  .landing-page .shop-categories .feature { min-height: 13rem; }
   .path-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 460px) {
-  .alpine-page .shop-categories .feature-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
