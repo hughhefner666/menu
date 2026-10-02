@@ -3,53 +3,137 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A collection of responsive navigation patterns.">
-  <title>Menu patterns | Responsive navigation</title>
+  <meta name="description" content="Explore health and safety information by category, plus a professional casting directory.">
+  <title>SwissShopCH | Explore</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="sidebar-page alpine-page landing-page">
+  <div class="landing-topline">Swiss health information · No products, orders, or bookings offered</div>
   <header class="site-header">
     <nav class="nav-shell" aria-label="Primary navigation">
-      <a class="brand" href="index.html"><span class="brand-mark">A</span>Aster</a>
-      <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" data-menu-toggle><span></span><span class="sr-only">Open menu</span></button>
-      <ul class="nav-menu" id="primary-menu">
+      <a class="brand" href="index.html"><span class="swiss-flag" role="img" aria-label="Swiss flag"><span></span></span>SwissShopCH</a>
+      <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" aria-label="Open navigation" data-menu-toggle>
+        <span></span><span class="sr-only">Open navigation</span>
+      </button>
+      <div class="sidebar-overlay" data-menu-overlay hidden></div>
+      <ul class="nav-menu" id="primary-menu" aria-label="SwissShopCH menu">
+        <li class="sidebar-close-item"><button class="sidebar-close" type="button" aria-label="Close navigation" data-menu-close>&times;</button></li>
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="1.html">About</a></li>
-        <li><a href="2.html">Services</a></li>
-        <li><a href="3.html">Gallery</a></li>
-        <li><a href="4.html">Pricing</a></li>
-        <li><a href="5.html">Blog</a></li>
-        <li><a href="6.html">Contact</a></li>
-        <li><a href="7.html">Tokyo casting</a></li>
-        <li><a href="8.html">AI photo menu</a></li>
+        <li><a href="7.html#directory">Talent directory</a></li>
+        <li><a href="3.html#categories">Shop</a></li>
+        <li><a href="3.html#about">About</a></li>
+        <li><a href="3.html#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
-  <main class="page">
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Responsive navigation playground</p>
-        <h1>Menus that feel good everywhere.</h1>
-        <p class="lede">A polished set of small, static HTML examples. Each page explores a different implementation while sharing a clear visual language, touch-friendly controls, and accessible navigation.</p>
+    <nav class="category-bar" aria-label="Shop categories">
+      <div class="category-bar-inner">
+        <span class="category-bar-label">Browse categories</span>
+        <ul>
+          <li><a href="3.html#peptides">Peptides</a></li>
+          <li><a href="3.html#testosterone">Testosterone</a></li>
+          <li><a href="3.html#sarms">SARMs</a></li>
+          <li><a href="3.html#hgh">HGH</a></li>
+          <li><a href="3.html#other-stuff">Other Stuff</a></li>
+        </ul>
       </div>
-      <aside class="hero-card">
-        <strong>7</strong>
-        <p>navigation patterns, ready to inspect and adapt.</p>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero alpine-hero landing-hero" aria-labelledby="welcome-title">
+      <div class="alpine-ridge" aria-hidden="true"></div>
+      <div>
+        <p class="eyebrow">SwissShopCH · Switzerland</p>
+        <h1 id="welcome-title">Health information.<br>Clearly presented.</h1>
+        <p class="lede">Browse general health and safety information by category, or visit the professional directory for lawful production work.</p>
+        <p class="landing-disclaimer">Informational only. No products are offered or sold, and no orders, payments, or transactional bookings are accepted.</p>
+      </div>
+      <aside class="landing-currency-card" aria-label="Currency and price information">
+        <span class="currency-label">Currency reference</span>
+        <strong>CHF</strong>
+        <span>Swiss francs</span>
+        <p>The supplied template lists price placeholders only; no verified prices were provided.</p>
       </aside>
     </section>
-    <section class="content-card">
-      <p class="eyebrow">Start here</p>
-      <h2>Choose a pattern to explore</h2>
-      <div class="feature-grid">
-        <article class="feature"><h3>JavaScript menu</h3><p>Progressive enhancement with an explicit button and state.</p></article>
-        <article class="feature"><h3>CSS-only menu</h3><p>A checkbox-powered pattern with no runtime dependency.</p></article>
-        <article class="feature"><h3>Framework example</h3><p>A clean Bootstrap-inspired layout without overwhelming the content.</p></article>
-        <article class="feature"><h3>Tokyo casting</h3><p>A neon 18+ directory demo for legal production, modeling, photography, and events.</p></article>
-        <article class="feature"><h3>AI photo menu</h3><p>Clearly labeled synthetic visual studies for non-explicit professional photography.</p></article>
+
+    <nav class="topic-quickbar" aria-label="Quick links to health information">
+      <div class="topic-quickbar-copy">
+        <span class="eyebrow">Browse health topics</span>
+        <span>Jump to safety information</span>
+      </div>
+      <ul>
+        <li><a href="3.html#peptides">Peptides <span aria-hidden="true">↗</span></a></li>
+        <li><a href="3.html#testosterone">Testosterone <span aria-hidden="true">↗</span></a></li>
+        <li><a href="3.html#sarms">SARMs <span aria-hidden="true">↗</span></a></li>
+        <li><a href="3.html#hgh">HGH <span aria-hidden="true">↗</span></a></li>
+        <li><a href="3.html#other-stuff">Other Stuff <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+
+    <section class="content-card landing-paths" aria-labelledby="paths-title">
+      <p class="eyebrow">Explore</p>
+      <h2 id="paths-title">Choose your destination</h2>
+      <div class="path-grid">
+        <a class="path-card" href="7.html#directory">
+          <span class="path-label">Professional directory</span>
+          <h3>Talent directory</h3>
+          <p>View professional profiles for lawful video production, modeling, photography, and events in Tokyo.</p>
+          <span class="path-link">Explore profiles <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="path-card" href="3.html#categories">
+          <span class="path-label">Health &amp; safety</span>
+          <h3>Browse categories</h3>
+          <p>Read general safety information for five health topics. This is an information page, not a product catalog.</p>
+          <span class="path-link">Explore topics <span aria-hidden="true">→</span></span>
+        </a>
       </div>
     </section>
+
+    <section class="content-card shop-categories landing-categories" aria-labelledby="categories-title">
+      <p class="eyebrow">Health &amp; safety topics</p>
+      <h2 id="categories-title">Categories</h2>
+      <p class="landing-intro">Choose a topic to read general safety information. For personal medical questions, speak with a qualified health professional.</p>
+      <div class="feature-grid">
+        <a class="feature landing-category" href="3.html#peptides">
+          <span class="category-number">01</span>
+          <h3>Peptides</h3>
+          <p>Quality and safety considerations for products marketed online.</p>
+          <span class="category-link">View information <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="feature landing-category" href="3.html#testosterone">
+          <span class="category-number">02</span>
+          <h3>Testosterone</h3>
+          <p>Why hormone medicines require clinical assessment and monitoring.</p>
+          <span class="category-link">View information <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="feature landing-category" href="3.html#sarms">
+          <span class="category-number">03</span>
+          <h3>SARMs</h3>
+          <p>General cautions about unapproved products and uncertain ingredients.</p>
+          <span class="category-link">View information <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="feature landing-category" href="3.html#hgh">
+          <span class="category-number">04</span>
+          <h3>HGH</h3>
+          <p>Information about medically supervised growth hormone treatment.</p>
+          <span class="category-link">View information <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="feature landing-category" href="3.html#other-stuff">
+          <span class="category-number">05</span>
+          <h3>Other Stuff</h3>
+          <p>General reminders for the safe use of prescription medicines.</p>
+          <span class="category-link">View information <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+      <p class="landing-note">This site provides general information only. It is not medical advice, a pharmacy, or a source of medicines. The supplied template contains “CHF –” placeholders, not confirmed prices, so no prices are displayed.</p>
+    </section>
   </main>
-  <footer class="site-footer">Built as a static HTML demo · resize the window to test every menu.</footer>
+
+  <footer class="site-footer landing-footer">
+    <span>SwissShopCH · Switzerland</span>
+    <a href="3.html#contact">Health information and trusted resources</a>
+    <span>Informational demo only</span>
+  </footer>
   <script src="navigation.js"></script>
 </body>
 </html>
