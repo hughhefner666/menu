@@ -827,6 +827,56 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
 .landing-currency-card strong { margin: .2rem 0; color: #087f5b; font-size: clamp(3.5rem, 7vw, 5rem); line-height: 1; letter-spacing: -.07em; }
 .landing-currency-card > span:nth-of-type(2) { color: #365249; font-size: 1rem; font-weight: 700; }
 .landing-currency-card p { margin: 1.3rem 0 0; padding-top: 1rem; color: #64756f; border-top: 1px solid #e5ebe8; font-size: .84rem; }
+.topic-quickbar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem 2rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.4rem;
+  border: 1px solid #dcebe4;
+  border-radius: 1rem;
+  background: linear-gradient(100deg, #edf8f4, #fff);
+  box-shadow: 0 8px 24px rgba(23, 51, 43, .04);
+}
+.topic-quickbar-copy { display: grid; gap: .1rem; white-space: nowrap; }
+.topic-quickbar-copy .eyebrow { margin: 0; font-size: .65rem; }
+.topic-quickbar-copy > span:last-child { color: #536a61; font-size: .78rem; }
+.topic-quickbar ul {
+  display: flex;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .5rem;
+  list-style: none;
+}
+.topic-quickbar a {
+  display: inline-flex;
+  min-height: 2.6rem;
+  padding: .55rem .85rem;
+  align-items: center;
+  gap: .45rem;
+  color: #365249;
+  border: 1px solid #e2ebe6;
+  border-radius: 999px;
+  background: #fff;
+  font-size: .78rem;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease, border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.topic-quickbar a span { color: #087f5b; font-size: .72rem; }
+.topic-quickbar a:hover,
+.topic-quickbar a:focus-visible {
+  color: #08684c;
+  border-color: #9bcdb9;
+  background: #f8fcfa;
+  transform: translateY(-1px);
+}
+.topic-quickbar a:focus-visible { outline: 3px solid rgba(8, 127, 91, .3); outline-offset: 2px; }
 .landing-paths,
 .landing-categories { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .landing-page .content-card { padding: clamp(2rem, 5vw, 4rem); }
@@ -902,6 +952,8 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
 @media (max-width: 1000px) {
   .landing-page .page { width: min(900px, calc(100% - 2.5rem)); }
   .landing-hero { gap: 2.5rem; }
+  .topic-quickbar { grid-template-columns: 1fr; gap: .75rem; }
+  .topic-quickbar ul { justify-content: flex-start; }
   .landing-page .shop-categories .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .landing-page .shop-categories .feature { min-height: 16rem; }
 }
@@ -912,6 +964,8 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
   .landing-page .page { width: calc(100% - 2rem); padding-top: 2rem; }
   .landing-hero { min-height: 0; padding: 2rem 1.5rem; grid-template-columns: 1fr; gap: 1.5rem; }
   .landing-currency-card { min-height: 13rem; }
+  .topic-quickbar { padding: 1rem; }
+  .topic-quickbar ul { padding-bottom: .35rem; overflow-x: auto; scrollbar-width: thin; }
   .landing-page .content-card { padding: 1.5rem; }
   .path-card { min-height: 16rem; padding: 1.5rem; }
   .category-bar-inner {
@@ -935,5 +989,6 @@ h2 { margin-bottom: .8rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1
 
 @media (prefers-reduced-motion: reduce) {
   .category-bar a,
+  .topic-quickbar a,
   .path-card { transition: none; }
 }
