@@ -392,6 +392,19 @@ h1 em, h2 em { color: var(--green); font-style: normal; }
 .editorial-callout { display: grid; grid-template-columns: 10rem 1fr; gap: 2rem; padding: 1.4rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .callout-index { color: var(--green); font-size: .66rem; font-weight: 700; letter-spacing: .12em; }
 .editorial-callout p { max-width: 42rem; margin: 0; color: #5f6c63; font-family: var(--display); font-size: 1.1rem; font-weight: 500; }
+.health-notice { max-width: 52rem; padding: 1.5rem 1.7rem; color: #536157; background: #e8ebe2; border-left: 3px solid #78906b; }
+.health-notice p, .health-resources > p { margin: 0; font-size: .9rem; }
+.health-category-list { border-top: 1px solid var(--line); }
+.health-category { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding: 1.35rem 0; border-bottom: 1px solid var(--line); }
+.health-category h3 { margin: 0 0 .35rem; font-size: 1.15rem; font-weight: 650; letter-spacing: -.04em; }
+.health-category p { max-width: 48rem; margin: 0; color: #667269; font-size: .84rem; }
+.health-resources { max-width: 54rem; color: #647067; font-size: .88rem; }
+.health-resources ul { display: grid; gap: .6rem; margin: 1.2rem 0; padding: 0; list-style: none; }
+.health-resources li a { display: flex; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; color: var(--green); background: #e9ede5; border: 1px solid #d7ded3; text-decoration: none; }
+.health-resources li a:hover { background: #e1e8dd; }
+.health-resources li a span { flex: 0 0 auto; }
+.health-resources strong { color: var(--ink); }
+.health-resources p a { color: var(--green-dark); font-weight: 700; }
 
 .category-page .page-hero { min-height: 340px; }
 .category-page .page-hero h1 { font-size: clamp(4rem, 9vw, 8rem); }
@@ -547,6 +560,7 @@ h1 em, h2 em { color: var(--green); font-style: normal; }
   .notice-box { grid-template-columns: 2rem 1fr; gap: .65rem; padding: 1rem; }
   .notice-box > a { grid-column: 2; }
   .about-layout { grid-template-columns: 1fr; gap: 1.3rem; padding: 3.5rem 0; }
+  .health-category { grid-template-columns: 2rem 1fr; gap: .65rem; }
   .about-aside { display: flex; align-items: center; gap: .7rem; }
   .large-index { font-size: 2.2rem; }
   .about-aside p { margin: 0; }
