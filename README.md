@@ -1,17 +1,18 @@
-# menu
-[Menu Responsive No Javascript](https://wawtv.github.io/menu/index.html)
+# SwissShop storefront
 
-The demos share `styles.css` for the responsive visual system. JavaScript-powered variants use
-`navigation.js`, while `1.html` and `6.html` demonstrate a CSS-only checkbox toggle.
+A dependency-free static storefront for GitHub Pages. Open `index.html` to browse the category menu.
 
-###### [menu 1](https://wawtv.github.io/menu/1.html)
+## Pages
 
-###### [menu 2](https://wawtv.github.io/menu/2.html)
+- `2.html` — Catalogue overview
+- `3.html` — Switzerland catalogue context
+- `4.html` — Peptides
+- `5.html` — Testosterone
+- `6.html` — SARMs
+- `1.html` — About the storefront
+- `7.html` — Frequently asked questions
+- `8.html` — Contact form template
 
-###### [menu 3](https://wawtv.github.io/menu/3.html)
+The existing catalogue content does not include individual product details, prices, or ordering information. The contact form is a non-transmitting placeholder.
 
-###### [menu 4](https://wawtv.github.io/menu/4.html)
-
-###### [menu 5](https://wawtv.github.io/menu/5.html)
-
-###### [menu 6](https://wawtv.github.io/menu/6.html)
+For a local preview, run `python -m http.server 8000` from the repository root and open `http://localhost:8000`.
