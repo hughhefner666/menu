@@ -1,18 +1,19 @@
-# SwissShop storefront
+# SwissShop
 
-A dependency-free static storefront for GitHub Pages. Open `index.html` to browse the category menu.
+The root page is a static, educational guide to peptide compounds, androgen-related compounds,
+investigational androgen modulators, and growth hormone therapies. The site contains no product
+listings, prices, sales links, or ordering functionality. Its information is general education,
+not medical advice.
 
-## Pages
+The numbered pages are part of the site:
 
+- `1.html` — About
 - `2.html` — Catalogue overview
-- `3.html` — Switzerland catalogue context
+- `3.html` — Health and safety information for Switzerland
 - `4.html` — Peptides
 - `5.html` — Testosterone
-- `6.html` — SARMs
-- `1.html` — About the storefront
+- `6.html` — SARM
 - `7.html` — Frequently asked questions
-- `8.html` — Contact form template
+- `8.html` — Contact
 
-The existing catalogue content does not include individual product details, prices, or ordering information. The contact form is a non-transmitting placeholder.
-
-For a local preview, run `python -m http.server 8000` from the repository root and open `http://localhost:8000`.
+The site uses static HTML, CSS, and JavaScript. GitHub Pages deploys it without a build step.
