@@ -1,10 +1,19 @@
-# Health Notes
+# SwissShop
 
-The root page is a static, educational guide to peptides, steroids and testosterone, SARMs,
-and human growth hormone. It contains no product listings, prices, sales links, or ordering
-functionality. The information is general education, not medical advice.
+The root page is a static, educational guide to peptide compounds, androgen-related compounds,
+investigational androgen modulators, and growth hormone therapies. The site contains no product
+listings, prices, sales links, or ordering functionality. Its information is general education,
+not medical advice.
 
-The cross on the page is decorative and does not indicate Swiss origin, endorsement, or
-regulatory approval.
+The numbered pages are part of the site:
 
-The numbered HTML pages remain independent responsive navigation and layout demos.
+- `1.html` — About
+- `2.html` — Catalogue overview
+- `3.html` — Health and safety information for Switzerland
+- `4.html` — Peptides
+- `5.html` — Testosterone
+- `6.html` — SARM
+- `7.html` — Frequently asked questions
+- `8.html` — Contact
+
+The site uses static HTML, CSS, and JavaScript. GitHub Pages deploys it without a build step.

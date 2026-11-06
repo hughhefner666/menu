@@ -1,7 +1,30 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Toggle menu | Menu patterns</title><link rel="stylesheet" href="styles.css"></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Peptides category in the SwissShop catalogue.">
+  <title>Peptides — SwissShop</title>
+  <link rel="stylesheet" href="storefront.css">
+</head>
 <body>
-  <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="index.html"><span class="brand-mark">A</span>Aster</a><button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" data-menu-toggle><span></span><span class="sr-only">Open menu</span></button><ul class="nav-menu" id="primary-menu"><li><a href="index.html">Home</a></li><li><a href="1.html">About</a></li><li><a href="2.html">Services</a></li><li><a href="3.html">Gallery</a></li><li><a href="4.html" aria-current="page">Pricing</a></li><li><a href="5.html">Blog</a></li><li><a href="6.html">Contact</a></li></ul></nav></header>
-  <main class="page"><section class="hero"><div><p class="eyebrow">Pattern 04 · explicit state</p><h1>Toggle with confidence.</h1><p class="lede">The menu button exposes its state to assistive technology and closes the panel after a selection. Small details make a mobile interaction feel finished.</p></div><aside class="hero-card"><strong>ARIA</strong><p>stateful controls that communicate what is open.</p></aside></section><section class="content-card"><p class="eyebrow">Interaction</p><h2>Built for thumbs and keyboards</h2><p class="lede">Controls have a generous touch target, visible focus rings, and no dependency on icon fonts.</p></section></main><footer class="site-footer">Accessible JavaScript toggle navigation</footer><script src="navigation.js"></script>
-</body></html>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation">
+    <a class="brand" href="index.html" aria-label="SwissShop home"><span class="brand-symbol" aria-hidden="true">S</span><span>Swiss<span class="brand-light">Shop</span></span></a>
+    <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" data-menu-toggle><span class="menu-lines" aria-hidden="true"></span><span class="sr-only">Open navigation</span></button>
+    <ul class="nav-menu" id="primary-menu"><li><a href="index.html">Home</a></li><li><a href="2.html">Catalogue</a></li><li><a href="4.html" aria-current="page">Peptides</a></li><li><a href="5.html">Testosterone</a></li><li><a href="6.html">SARMs</a></li><li><a href="7.html">FAQ</a></li><li><a href="1.html">About</a></li><li><a class="nav-contact" href="8.html">Contact <span aria-hidden="true">↗</span></a></li></ul>
+  </nav></header>
+  <main id="main" class="inner-page category-page">
+    <section class="page-hero">
+      <p class="eyebrow"><a href="index.html">Home</a><span class="eyebrow-divider">/</span><a href="2.html">Catalogue</a><span class="eyebrow-divider">/</span> 01</p>
+      <h1>Peptides<em class="title-period">.</em></h1>
+      <p class="hero-lede">A category listed in the SwissShop menu for visitors in Switzerland.</p>
+      <div class="page-hero-index"><span>CATALOGUE CATEGORY</span><span>01 / 03</span></div>
+    </section>
+    <section class="empty-catalog"><div class="empty-symbol" aria-hidden="true">◌</div><p class="eyebrow">Catalogue details</p><h2>More information<br><em>is not listed yet.</em></h2><p>Product names, descriptions, prices, and ordering information are not available in the current site content.</p><a class="button button-dark" href="8.html">Contact <span aria-hidden="true">→</span></a></section>
+    <nav class="category-switcher" aria-label="Other catalogue categories"><a href="2.html"><span>All categories</span><strong>Catalogue overview ↗</strong></a><a href="5.html"><span>Next category · 02</span><strong>Testosterone →</strong></a></nav>
+  </main>
+  <footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="index.html"><span class="brand-symbol" aria-hidden="true">S</span><span>Swiss<span class="brand-light">Shop</span></span></a><p>A focused category menu for visitors in Switzerland.</p><div class="footer-links"><a href="2.html">Catalogue</a><a href="1.html">About</a><a href="7.html">FAQ</a><a href="8.html">Contact</a></div></div><div class="footer-bottom"><span>SwissShop</span><span>Product details, prices, and ordering information are not listed on this site.</span><a href="#main">Back to top ↑</a></div></footer>
+  <script src="storefront.js"></script>
+</body>
+</html>

@@ -1,7 +1,35 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bootstrap menu | Menu patterns</title><link rel="stylesheet" href="styles.css"></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the Peptides, Testosterone, and SARMs category menu.">
+  <title>Catalogue — SwissShop</title>
+  <link rel="stylesheet" href="storefront.css">
+</head>
 <body>
-  <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="index.html"><span class="brand-mark">T</span>Testo</a><button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" data-menu-toggle><span></span><span class="sr-only">Open menu</span></button><ul class="nav-menu" id="primary-menu"><li><a href="index.html">Home</a></li><li><a href="1.html">Products</a></li><li><a href="2.html" aria-current="page">Benefits</a></li><li><a href="3.html">Science</a></li><li><a href="4.html">Pricing</a></li><li><a href="5.html">Reviews</a></li><li><a href="6.html">Contact</a></li></ul></nav></header>
-  <main class="page"><section class="hero"><div><p class="eyebrow">Pattern 02 · framework ready</p><h1>Familiar structure, less noise.</h1><p class="lede">A framework-friendly navigation with the same responsive behavior as the rest of the collection. Keep the structure, swap the class names, and plug it into your component system.</p></div><aside class="hero-card"><strong>700px</strong><p>the shared mobile breakpoint across the demos.</p></aside></section><section class="content-card"><p class="eyebrow">Framework notes</p><h2>Bring your own utilities</h2><p class="lede">This static version intentionally avoids a CDN so the example works offline. Its semantic navigation can be styled with Bootstrap, Tailwind, or your own design tokens.</p></section></main><footer class="site-footer">Framework-friendly responsive navigation</footer><script src="navigation.js"></script>
-</body></html>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation">
+    <a class="brand" href="index.html" aria-label="SwissShop home"><span class="brand-symbol" aria-hidden="true">S</span><span>Swiss<span class="brand-light">Shop</span></span></a>
+    <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false" data-menu-toggle><span class="menu-lines" aria-hidden="true"></span><span class="sr-only">Open navigation</span></button>
+    <ul class="nav-menu" id="primary-menu"><li><a href="index.html">Home</a></li><li><a href="2.html" aria-current="page">Catalogue</a></li><li><a href="4.html">Peptides</a></li><li><a href="5.html">Testosterone</a></li><li><a href="6.html">SARMs</a></li><li><a href="7.html">FAQ</a></li><li><a href="1.html">About</a></li><li><a class="nav-contact" href="8.html">Contact <span aria-hidden="true">↗</span></a></li></ul>
+  </nav></header>
+  <main id="main" class="inner-page">
+    <section class="page-hero">
+      <p class="eyebrow"><a href="index.html">Home</a><span class="eyebrow-divider">/</span> Catalogue</p>
+      <h1>A focused<br><em>category menu.</em></h1>
+      <p class="hero-lede">Explore the three categories listed for visitors in Switzerland. Individual product details, prices, and ordering information are not provided.</p>
+      <div class="page-hero-index"><span>THE CATALOGUE</span><span>03 CATEGORIES</span></div>
+    </section>
+    <section class="section-block catalog-list" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><p class="eyebrow">Browse <span class="eyebrow-divider">/</span> 01—03</p><h2 id="catalog-title">Choose a category</h2></div><span class="section-side-note">No individual product listings are available here.</span></div>
+      <div class="catalog-row"><span class="catalog-number">01</span><div><h3>Peptides</h3><p>Category listed in the current menu.</p></div><a href="4.html" aria-label="View Peptides category">Explore <span aria-hidden="true">↗</span></a></div>
+      <div class="catalog-row"><span class="catalog-number">02</span><div><h3>Testosterone</h3><p>Category listed in the current menu.</p></div><a href="5.html" aria-label="View Testosterone category">Explore <span aria-hidden="true">↗</span></a></div>
+      <div class="catalog-row"><span class="catalog-number">03</span><div><h3>SARMs</h3><p>Category listed in the current menu.</p></div><a href="6.html" aria-label="View SARMs category">Explore <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <aside class="notice-box"><span class="notice-mark" aria-hidden="true">i</span><p><strong>Catalogue information</strong><br>The source menu does not include individual product names, descriptions, prices, or ordering details.</p><a href="7.html">Read the FAQ <span aria-hidden="true">→</span></a></aside>
+  </main>
+  <footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="index.html"><span class="brand-symbol" aria-hidden="true">S</span><span>Swiss<span class="brand-light">Shop</span></span></a><p>A focused category menu for visitors in Switzerland.</p><div class="footer-links"><a href="2.html">Catalogue</a><a href="1.html">About</a><a href="7.html">FAQ</a><a href="8.html">Contact</a></div></div><div class="footer-bottom"><span>SwissShop</span><span>Product details, prices, and ordering information are not listed on this site.</span><a href="#main">Back to top ↑</a></div></footer>
+  <script src="storefront.js"></script>
+</body>
+</html>
